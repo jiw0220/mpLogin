@@ -1,0 +1,11 @@
+<block wx:if="{{mpLoginStatus!==0}}">
+  <view class="full-view">
+    <block wx:if="{{mpLoginStatus===1}}">
+      <text class="text4 black3">正在初始化...</text>
+    </block>
+    <block wx:if="{{mpLoginStatus===2}}">
+      <text class="text4 black3">初始化失败: {{mpLoginFailMsg}}</text>
+      <text class="text4 priceColor" catchtap="login">点击重试</text>
+    </block>
+  </view>
+</block>
