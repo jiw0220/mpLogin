@@ -9,11 +9,8 @@ Component({
         addGlobalClass: true,//这个特性从小程序基础库版本 2.2.3 开始支持。
     },
     lifetimes: {
-        attached: function () {// 在组件实例进入页面节点树时执行
+        ready: function () {
             this.login();
-        },
-        detached: function () {  // 在组件实例被从页面节点树移除时执行
-
         },
     },
     methods: {
