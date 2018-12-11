@@ -34,7 +34,7 @@
 
 为了优化逻辑3,我采用了组件(component)的形式去实现它.
 
-简单来说,创建login组件在组件的”attached”周期中实现login,将”登录中显示什么”,”登录失败显示什么” 放进组件中.登录成功时triggerEvent(‘login’)通知登录态页面,登录态页面的初始化业务不放在 (onLoad 或 onReady)里,而是自定义的onLogin里.
+简单来说,创建login组件在组件的”ready”周期中实现login,将”登录中显示什么”,”登录失败显示什么” 放进组件中.登录成功时triggerEvent(‘login’)通知登录态页面,登录态页面的初始化业务不放在 (onLoad 或 onReady)里,而是自定义的onLogin里.
 
 login只需要做一次,为了避免重复login,在实现过程中将登录结果记录在对应的module中.
 
