@@ -8,10 +8,8 @@ Component({
     options: {
         addGlobalClass: true,//这个特性从小程序基础库版本 2.2.3 开始支持。
     },
-    lifetimes: {
-        ready: function () {
-            this.login();
-        },
+    ready: function () {
+        this.login();
     },
     methods: {
         login: function () {
